@@ -1,4 +1,3 @@
-import { candidates } from '@/seed/seed';
 
 export const getCandidates = async (search: string) => {
 
@@ -15,12 +14,8 @@ export const getCandidates = async (search: string) => {
             }
         ])
     })
-    const candidatesApi = await response.json();
-    console.log(candidatesApi)
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(candidates);
-        }, 1000); // Simula un retraso de 1 segundo
-    });
+    const candidates = await response.json();
+    
+    return candidates
 
 }

@@ -50,6 +50,10 @@ export const CandidateCard = ({ candidate }: Props) => {
                             <h3>Debilidades</h3>
                         </div>
                         <p>{candidate.weaknesses}</p>
+                        <div className="bg-red-200 text-gray-800 w-[150px] inline-flex rounded-full px-2 py-1 text-sm">
+                            <h3>Feedback</h3>
+                        </div>
+                        <p>{candidate.feedback}</p>
                     </div>
                     <div className="text-xl">
                         <FaStar className="text-yellow-500 mr-1" /> {3}/5
